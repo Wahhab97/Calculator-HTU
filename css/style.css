@@ -1,0 +1,105 @@
+:root {
+  /* Colors */
+  --off-white: #f7f7f7;
+  --white: white;
+  --border-white: #e1e1e1;
+  --redish: #ee595f;
+  --dark-red: #8b2e32;
+  --yellowish: #eebb30;
+  --blueish: #3ea8e0;
+  --light-blue: #abdbe7;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 5rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 450px;
+  max-width: 95%;
+  height: 400px;
+  box-shadow: 0px 0px 25px 11px rgba(0, 0, 0, 0.61);
+  padding: 30px 10px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+main header {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+main header .display {
+  width: 230px;
+  height: 45px;
+  background-color: var(--light-blue);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 2px solid black;
+  padding-inline: 5px;
+  overflow: hidden;
+}
+main header .c {
+  width: 80px;
+  height: 30px;
+  background-color: var(--redish);
+  border: 2px solid var(--dark-red);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 270px;
+  gap: 5px;
+}
+main section * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section .nums,
+main section .equal {
+  font-weight: 600;
+  font-size: 2em;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+main section .nums {
+  border: 1px solid var(--border-white);
+  background: linear-gradient(to top, var(--off-white), var(--white));
+}
+main section .equal {
+  color: var(--white);
+  background-color: var(--blueish);
+}
+main section .op {
+  color: var(--white);
+  background-color: var(--yellowish);
+  border: 1px solid #3e3620;
+}
+.c:hover,
+main section *:hover {
+  cursor: pointer;
+}
